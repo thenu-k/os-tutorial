@@ -4,6 +4,10 @@
 VIDEO_MEMORY equ 0xb8000
 WHITE_ON_BLACK equ 0x0f ; the color byte for each character
 
+;This is a bit confusing!
+;In the actual program we would have already initialize the pointer of the string to ebx:
+mov ebx, <string_name>
+
 print_string_pm:
     pusha
     mov edx, VIDEO_MEMORY
